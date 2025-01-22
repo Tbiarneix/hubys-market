@@ -164,7 +164,7 @@ export default function Home() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md h-[180px] flex flex-col hover:scale-105 transition-transform"
+                className="bg-white p-6 rounded-xl shadow-md min-h-[180px] flex flex-col hover:scale-105 transition-transform"
               >
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
