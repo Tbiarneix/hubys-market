@@ -12,9 +12,8 @@ export async function POST(request: Request) {
       );
     }
 
-    // Envoyer un email de confirmation à l'utilisateur
     await resend.emails.send({
-      from: 'Hubys <onboarding@resend.dev>',
+      from: 'Hubys <no-reply@hubys.app>',
       to: email,
       subject: 'Bienvenue dans la liste d\'attente Hubys !',
       html: `
@@ -27,10 +26,9 @@ export async function POST(request: Request) {
       `,
     });
 
-    // Envoyer une notification à l'équipe
     await resend.emails.send({
-      from: 'Hubys <onboarding@resend.dev>',
-      to: 'thomas@hubys.app', // À remplacer par votre email
+      from: 'Hubys <noreply@hubys.app>',
+      to: 'hubys.app@gmail.com',
       subject: 'Nouvelle inscription à la liste d\'attente !',
       html: `
         <div>
