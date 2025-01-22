@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useState } from "react";
@@ -19,18 +18,35 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simuler un délai d'envoi
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast.success("Super ! Tu fais maintenant partie de la liste d'attente.", {
-      description: "On te tient au courant dès que l'application est disponible !",
-      duration: 5000,
-    });
-    
-    setEmail("");
-    setIsSubmitting(false);
-    onClose();
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'inscription');
+      }
+
+      toast.success("Super ! Tu fais maintenant partie de la liste d'attente.", {
+        description: "On te tient au courant dès que l'application est disponible !",
+        duration: 5000,
+      });
+
+      setEmail("");
+      onClose();
+    } catch (error) {
+      toast.error("Oups ! Une erreur est survenue.", {
+        description: "Merci de réessayer plus tard ou de nous contacter directement.",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -69,7 +85,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-[#ffc49d] hover:bg-[#ffb784] text-gray-900 font-medium py-3 px-6 rounded-full transition-colors"
+            className="w-full bg-[#ffc49d] hover:bg-[#ffb784] text-gray-900 font-medium py-3 px-6 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Inscription en cours..." : "Rejoindre la liste d'attente"}
           </button>
