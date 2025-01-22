@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useState } from "react";
@@ -40,6 +41,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       setEmail("");
       onClose();
     } catch (error) {
+      console.error(error);
       toast.error("Oups ! Une erreur est survenue.", {
         description: "Merci de réessayer plus tard ou de nous contacter directement.",
         duration: 5000,
