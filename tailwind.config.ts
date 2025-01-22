@@ -13,6 +13,18 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    borderRadius: {
+      'none': '0',
+      'sm': '0.125rem',
+      DEFAULT: '0.25rem',
+      'md': '0.375rem',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'large': '2rem',
+      'hero': '0 0 8rem 0',
+      'footer': '8rem 0 0 0',
+
+    }
   },
   plugins: [],
 } satisfies Config;
