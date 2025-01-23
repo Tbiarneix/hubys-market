@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { resend } from '@/lib/resend';
+import { v4 as uuidv4 } from 'uuid';
 
 export async function POST(request: Request) {
   try {
@@ -16,6 +17,7 @@ export async function POST(request: Request) {
       email: email,
       unsubscribed: false,
       audienceId: '27e1a7b9-a059-45a6-94b0-7b0d4a40dffe',
+      lastName: uuidv4(),
     });
 
     await resend.emails.send({
