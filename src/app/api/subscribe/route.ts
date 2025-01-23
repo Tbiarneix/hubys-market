@@ -12,6 +12,12 @@ export async function POST(request: Request) {
       );
     }
 
+    await resend.contacts.create({
+      email: email,
+      unsubscribed: false,
+      audienceId: '27e1a7b9-a059-45a6-94b0-7b0d4a40dffe',
+    });
+
     await resend.emails.send({
       from: 'Hubys <no-reply@hubys.app>',
       to: email,
