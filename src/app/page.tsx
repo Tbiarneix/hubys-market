@@ -37,7 +37,7 @@ export default function Home() {
               Simplifiez votre vie quotidienne et vos moments partagés
             </h1>
             <p className="text-xl mb-8 text-gray-700">
-              Reprennez le contrôle, organisez vos événements et partagez des
+              Reprenez le contrôle, organisez vos événements et partagez des
               moments en famille ou entre amis avec simplicité.
             </p>
             <button 
@@ -72,7 +72,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-600 mb-6">
                 Seul, en couple ou en famille ? Créez votre profil et
-                centralisez vos activités
+                centralisez vos activités.
               </p>
               <div className="flex justify-center">
                 <Image
@@ -90,7 +90,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-600 mb-6">
                 Calendrier, listes paratagées : organiser votre quotidien n'a
-                jamais été aussi simple
+                jamais été aussi simple.
               </p>
               <div className="flex justify-center">
                 <Image
@@ -107,7 +107,7 @@ export default function Home() {
                 Gestion d'Événements
               </h3>
               <p className="text-gray-600 mb-6">
-                Planifiez et gérez vos événements de A à Z sans prise de tête
+                Planifiez et gérez vos événements de A à Z sans prise de tête.
               </p>
               <div className="flex justify-center">
                 <Image
@@ -132,34 +132,34 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Liste de souhaits",
-                description:
-                  "Gérez vos listes de souhaits en un clic et pour toute la famille !",
-              },
-              {
                 title: "Organisation d'Événements",
                 description:
-                  "Gérez les présences, les repas et les courses en quelques clics",
+                  "Gérez les présences, les repas et les courses en quelques clics.",
               },
               {
                 title: "Choisissez votre location",
                 description:
-                  "Fini les fils whatsapp interminables et désorganisés, mettez vous d'accord sur votre location en toute simplicité",
-              },
-              {
-                title: "Gestion des Comptes",
-                description:
-                  "Suivez facilement les dépenses et les partages de frais",
+                  "Fini les fils whatsapp interminables et désorganisés, mettez vous d'accord sur votre location en toute simplicité.",
               },
               {
                 title: "Activités de Groupe",
                 description:
-                  "Planifiez et organisez vos activités en groupe facilement pour vos événements",
+                  "Planifiez et organisez vos activités en groupe facilement pour vos événements.",
+              },
+              {
+                title: "Gestion des Comptes",
+                description:
+                  "Suivez facilement les dépenses et les partages de frais.",
+              },
+              {
+                title: "Liste de souhaits",
+                description:
+                  "Gérez et partagez vos listes de souhaits en un clic et pour toute la famille !",
               },
               {
                 title: "Secret Santa",
                 description:
-                  "Organisez vos Secret Santa pour chaque groupe sans prise de tête",
+                  "Organisez vos Secret Santa pour chaque groupe de manière automatique.",
               },
             ].map((feature, index) => (
               <div
