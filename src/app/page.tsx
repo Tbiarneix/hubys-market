@@ -34,11 +34,11 @@ export default function Home() {
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Simplifiez votre vie quotidienne et vos moments partagés
+              L'application tout-en-un pour simplifier vos moments partagés
             </h1>
             <p className="text-xl mb-8 text-gray-700">
-              Reprenez le contrôle, organisez vos événements et partagez des
-              moments en famille ou entre amis avec simplicité.
+              Organisez vos événements et partagez des
+              moments entre amis ou en famille en toute simplicité.
             </p>
             <button 
               onClick={openModal}
